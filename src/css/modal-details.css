@@ -1,0 +1,84 @@
+.modal-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  padding: 64px 20px;
+  width: 375px;
+  height: 1361px;
+  background: var(--background-backdrop);
+}
+.container {
+}
+.product-container {
+  border-radius: 8px;
+  padding: 64px 20px;
+  width: 335px;
+  height: 1155px;
+  background: var(--background-main);
+}
+.visually-hidden {
+}
+.product-images {
+}
+.product-column {
+}
+.product-heading {
+  font-size: 32px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+.product-text {
+}
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.product-price {
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--color-main);
+}
+.product-review {
+}
+.product-input {
+}
+.product-lable {
+  line-height: 1.6;
+}
+.product-checkbox {
+}
+.product-description {
+  line-height: 1.6;
+}
+.product-size {
+  line-height: 1.6;
+}
+.button-order {
+  width: 295px;
+}
+.btn {
+  border-radius: 100px;
+  padding: 10px 24px;
+  min-height: 46px;
+  box-shadow: var(--box-shadow);
+  background: var(--background-btn-main);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-secondary);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+}
