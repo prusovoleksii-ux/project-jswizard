@@ -1,0 +1,10 @@
+.about-us {
+    background-color: var(--background-about-us);
+}
+
+.about-us.container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+    gap: 24px;
+}
