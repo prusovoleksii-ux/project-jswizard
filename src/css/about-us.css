@@ -17,6 +17,7 @@
 
 .about-us-img {
   max-width: 100%;
+  border-radius: 8px;
 }
 
 @media screen and (min-width: 1440px) {
