@@ -41,12 +41,7 @@
 body {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  color: #141414;
-  background-color: #fbfbfb;
+  min-width: 100vw;
 }
 
 main {

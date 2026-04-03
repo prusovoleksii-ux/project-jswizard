@@ -1,7 +1,6 @@
 .hero {
-  min-height: 617px;
-  padding-top: 72px;
-  padding-bottom: 0;
+  padding-top: 88px;
+  padding-bottom: 88px;
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.5), rgba(46, 47, 66, 0.5)),
     url('../img/hero/hero-mob.jpg');
@@ -34,6 +33,7 @@
 
 .hero-text {
   margin: 0 0 32px 0;
+  max-width: 335px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
@@ -51,6 +51,7 @@
   border-radius: 100px;
   background-color: #6b0609;
   color: #fff;
+  font-weight: 500;
   text-decoration: none;
   text-align: center;
 }
@@ -67,9 +68,8 @@
 /* tablet */
 @media screen and (min-width: 768px) {
   .hero {
-    min-height: 397px;
-    padding-top: 72px;
-    padding-bottom: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.5), rgba(46, 47, 66, 0.5)),
       url('../img/hero/hero-tab.jpg');
@@ -85,22 +85,20 @@
   }
 
   .hero-title {
-    margin-bottom: 24px;
+    max-width: 560px;
     font-size: 40px;
     line-height: 1.2;
   }
 
   .hero-text {
-    margin-bottom: 32px;
     max-width: 560px;
     font-size: 18px;
     line-height: 1.6;
   }
 
   .hero-btn {
+    width: 209px;
     max-width: 209px;
-    min-height: 46px;
-    margin: 0;
   }
 }
 
@@ -116,9 +114,8 @@
 /* desktop */
 @media screen and (min-width: 1440px) {
   .hero {
-    min-height: 508px;
-    padding-top: 93px;
-    padding-bottom: 93px;
+    padding-top: 92px;
+    padding-bottom: 92px;
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.5), rgba(46, 47, 66, 0.5)),
       url('../img/hero/hero-desk.jpg');
@@ -134,20 +131,20 @@
   }
 
   .hero-title {
+    max-width: 560px;
     font-size: 56px;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .hero-text {
     max-width: 560px;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .hero-btn {
+    width: 209px;
     max-width: 209px;
-    min-height: 46px;
-    margin: 0;
   }
 }
 
