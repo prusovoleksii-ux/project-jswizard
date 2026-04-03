@@ -114,24 +114,24 @@ button:focus-visible {
   background-color: var(--background-slider-hover);
 }
 
-.arrow button:hover,
-.arrow button:focus {
+.arrow button:hover {
   border: 1px solid rgba(8, 12, 9, 0.15);
   background-color: var(--background-slider-hover);
 }
+
 .arrow button:active {
   border: 1px solid rgba(8, 12, 9, 0.15);
   background-color: var(--background-btn-main);
 }
+
 .arrow button:hover .reviews-arrow-prev,
 .arrow button:hover .reviews-arrow-next,
-.arrow button:focus .reviews-arrow-prev,
-.arrow button:focus .reviews-arrow-next,
+.arrow button:focus-visible .reviews-arrow-prev,
+.arrow button:focus-visible .reviews-arrow-next,
 .arrow button:active .reviews-arrow-prev,
 .arrow button:active .reviews-arrow-next {
   fill: #fff;
 }
-
 .reviews-swiper-button-prev.is-disabled,
 .reviews-swiper-button-next.is-disabled,
 .reviews-swiper-button-prev.swiper-button-disabled,
