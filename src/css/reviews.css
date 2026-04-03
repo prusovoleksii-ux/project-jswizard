@@ -1,0 +1,157 @@
+#reviews {
+  padding: 64px 0;
+}
+.reviews-title {
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-rare);
+  line-height: var(--line-height-secondary);
+  letter-spacing: var(--letter-spacing-main);
+  text-align: left;
+  color: var(--color-main);
+  margin-bottom: 24px;
+}
+
+.reviews-text {
+  font-weight: var(--font-weight-additional);
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-main);
+  text-align: left;
+  color: var(--color-main);
+  margin-bottom: 80px;
+}
+.swiper.reviews-swiper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  margin: 0 auto;
+}
+
+#reviews .rating .star-filled {
+  fill: var(--color-main);
+}
+
+#reviews .rating .star-half {
+  fill: var(--color-main);
+}
+
+#reviews .rating .star-empty {
+  fill: var(--color-main);
+}
+
+.rating {
+  display: flex;
+  justify-content: start !important;
+  margin: 0;
+}
+
+.reviews-comment {
+  font-weight: var(--font-weight-rare);
+  font-size: var(--font-size-additional);
+  line-height: var(--line-height-main);
+  color: var(--color-main);
+  margin-top: 24px;
+}
+
+.reviews-author {
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-main);
+  color: var(--color-main);
+  margin-top: 24px;
+}
+
+.reviews-navigation {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews-swiper-pagination {
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(0) !important;
+}
+
+#reviews .swiper-pagination-bullet {
+  fill: var(--color-main);
+  background-color: var(--color-main);
+}
+
+#reviews .swiper-pagination-bullet-active {
+  fill: var(--color-main);
+  background-color: var(--color-main);
+}
+
+.arrow {
+  display: flex;
+  gap: 16px;
+}
+
+.reviews-swiper-button-prev,
+.reviews-swiper-button-next {
+  transition: var(--time);
+}
+
+.arrow button {
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  border-radius: 100px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--background-slider-normal);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:focus-visible {
+  outline: none;
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  background-color: var(--background-slider-hover);
+}
+
+.arrow button:hover,
+.arrow button:focus {
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  background-color: var(--background-slider-hover);
+}
+.arrow button:active {
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  background-color: var(--background-btn-main);
+}
+.arrow button:hover .reviews-arrow-prev,
+.arrow button:hover .reviews-arrow-next,
+.arrow button:focus .reviews-arrow-prev,
+.arrow button:focus .reviews-arrow-next,
+.arrow button:active .reviews-arrow-prev,
+.arrow button:active .reviews-arrow-next {
+  fill: #fff;
+}
+
+.reviews-swiper-button-prev.is-disabled,
+.reviews-swiper-button-next.is-disabled,
+.reviews-swiper-button-prev.swiper-button-disabled,
+.reviews-swiper-button-next.swiper-button-disabled {
+  pointer-events: none;
+  cursor: default;
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  background-color: var(--background-slider-normal);
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 1440px) {
+  .reviews-title {
+    font-weight: var(--font-weight-main);
+    font-size: var(--font-size-secondary);
+    line-height: var(--line-height-secondary);
+    letter-spacing: var(--letter-spacing-main);
+    text-align: left;
+    color: var(--color-main);
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+}
