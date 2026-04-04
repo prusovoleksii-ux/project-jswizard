@@ -15,8 +15,8 @@
   color: var(--color-main);
   margin-bottom: 32px;
 
-  font-weight: var(--font-weight-main);
-  font-size: var(--font-size-rare); /* 36px */
+  font-weight: var(--font-weight-secondary);
+  font-size: var(--font-size-secondary);
   line-height: var(--line-height-secondary);
   letter-spacing: var(--letter-spacing-main);
 }
@@ -58,7 +58,7 @@
   cursor: pointer;
 
   font-family: 'Raleway', sans-serif;
-  font-weight: var(--font-weight-main);
+  font-weight: var(--font-weight-secondary);
   font-size: var(--font-size-main);
   line-height: var(--line-height-main);
   color: var(--color-main);
@@ -90,7 +90,7 @@
   display: block;
 
   font-family: 'Raleway', sans-serif;
-  font-weight: var(--font-weight-additional);
+  font-weight: var(--font-weight-main);
   font-size: var(--font-size-body);
   line-height: var(--line-height-main);
   color: var(--color-main);
@@ -120,7 +120,7 @@
   }
 
   .faq-title {
-    font-size: var(--font-size-secondary); /* 48px */
+    font-size: var(--font-size-rare);
   }
 }
 
