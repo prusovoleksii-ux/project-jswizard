@@ -11,8 +11,8 @@ const modalRefs = {
   colorContainer: document.querySelector('.product-input'),
 };
 import { refs } from './refs';
-import { openModal } from './close-modal';
-
+import { closeModal, openModal } from './close-modal';
+import { swatchClass } from './render-functions';
 import { fetchFurnitureById } from './products-api';
 
 function renderColor(colors) {
@@ -28,7 +28,7 @@ function renderColor(colors) {
             ${index === 0 ? 'checked' : ''}
            />
            <span
-            class="product-color__circle"
+            class="product-color__circle ${swatchClass(color)}"
             style="background-color: ${color}"
            ></span>
        </label>`
