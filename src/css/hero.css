@@ -1,6 +1,6 @@
 .hero {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 88px;
+  padding-bottom: 88px;
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.5), rgba(46, 47, 66, 0.5)),
     url('../img/hero/hero-mob.jpg');
