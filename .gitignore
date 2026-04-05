@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#pull requests list
+pullrequests-list.txt
+https://github.com/prusovoleksii-ux/project-jswizard/pull/18
