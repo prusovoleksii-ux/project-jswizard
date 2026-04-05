@@ -7,6 +7,8 @@ import {
   scrollPage,
   hideLoadMoreBtn,
 } from './js/base-functions';
+import { initHeader } from './js/header.js';
+initHeader();
 
 export let TOTAL_ITEMS;
 export let page = 1;
