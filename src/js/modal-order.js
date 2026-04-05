@@ -137,7 +137,7 @@ const validation = {
   show: (input, { isValid, message }) => {
     const container = input.closest('.entry-field');
 
-    // Очищення
+   // --- Очищення ---
     container
       .querySelectorAll(
         '.just-validate-error-label, .just-validate-success-label'
@@ -145,7 +145,7 @@ const validation = {
       .forEach(el => el.remove());
     input.classList.remove('is-valid', 'is-invalid');
 
-    // Додавання нового стану
+   // --- Додавання нового стану ---
     input.classList.add(isValid ? 'is-valid' : 'is-invalid');
     const label = document.createElement('div');
     label.className = isValid
@@ -165,7 +165,7 @@ const validation = {
     input.classList.remove('is-valid', 'is-invalid');
   },
 
-  // Валідація з відображенням
+ // --- Валідація з відображенням ---
   validateAndShow: (input, validator, fieldName) => {
     if (!input.value.trim()) {
       validation.clear(input);
@@ -205,7 +205,7 @@ const fieldHandlers = {
     input: e => {
       e.target.value = normalizeName(e.target.value);
 
-      // Якщо поле вже торкалися - валідуємо при введенні
+      // --- Якщо поле вже торкалися - валідуємо при введенні ---
       if (fieldStates.name.wasTouched) {
         validation.validateAndShow(nameInput, validators.name, 'name');
       }
@@ -226,7 +226,7 @@ const fieldHandlers = {
 
   phone: {
     input: () => {
-      // Якщо поле вже торкалися - валідуємо при введенні
+      // --- Якщо поле вже торкалися - валідуємо при введенні ---
       if (fieldStates.phone.wasTouched) {
         validation.validateAndShow(phoneInput, validators.phone, 'phone');
       }
@@ -246,7 +246,7 @@ const fieldHandlers = {
   },
 };
 
-// Додаємо всі обробники
+ // --- Додаємо всі обробники ---
 nameInput.addEventListener('input', fieldHandlers.name.input);
 nameInput.addEventListener('blur', fieldHandlers.name.blur);
 nameInput.addEventListener('focus', fieldHandlers.name.focus);
@@ -297,7 +297,7 @@ form.addEventListener('submit', async e => {
     validation.clear(nameInput);
     validation.clear(phoneInput);
 
-    // ✅ Скидаємо стани
+    // --- Скидаємо стани ---
     fieldStates.name = { isValidated: false, wasTouched: false };
     fieldStates.phone = { isValidated: false, wasTouched: false };
 
