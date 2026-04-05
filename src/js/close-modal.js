@@ -1,10 +1,4 @@
-export const refs = {
-  backdrop: document.querySelector('.backdrop'),
-  modalCloseBtn: document.querySelector('.js-close-modal'),
-};
-
-
-const isModalOpen = () => {
+export const isModalOpen = () => {
   return !refs.backdrop.classList.contains('is-hidden');
 };
 

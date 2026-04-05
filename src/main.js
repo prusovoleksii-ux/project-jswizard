@@ -1,5 +1,7 @@
-import { openModal, closeModal, onBackdropClick, onKeydownEscape } from "./js/close-modal";
-import { refs } from "./js/close-modal";
+import { openModal, 
+        closeModal, 
+        onBackdropClick, 
+        onKeydownEscape } from "./js/close-modal";
 
 import { PAGE_SIZE } from './js/constants';
 import { refs } from './js/refs';
