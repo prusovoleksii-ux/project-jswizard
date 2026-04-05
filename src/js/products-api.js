@@ -12,7 +12,7 @@ export async function fetchFurnitures(category) {
       limit: PAGE_SIZE,
   };
 
-  if (category === 'all') {
+  if (category !== 'all') {
     params = {
       page: page,
       limit: PAGE_SIZE,
