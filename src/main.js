@@ -21,6 +21,7 @@ document.addEventListener('keydown', onKeydownEscape);
 //furniture list
 export let TOTAL_ITEMS;
 export let page = 1;
+export let furnitureCategory = 'all';
 
 let currentCategory = "all"
 
@@ -67,4 +68,6 @@ refs.categoryList.addEventListener('click', async (event) => {
   document.querySelectorAll('.our-furniture-item')
     .forEach(li => li.classList.remove('active'));
   target.classList.add('active');
+  console.log(target.dataset.id);
+  fetchFurnitures(target.dataset.id);
 })
