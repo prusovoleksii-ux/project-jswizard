@@ -1,7 +1,7 @@
 .furniture-title {
   font-family: "Raleway", sans-serif;
   font-weight: var(--font-weight-secondary);
-  font-size: var(--font-size-rare);
+  font-size: var(--font-size-secondary);
   line-height: var(--line-height-secondary);
   letter-spacing: var(--letter-spacing-main);
   color: var(--color-main);
@@ -327,6 +327,10 @@ background-image: image-set(
 }
 
 @media screen and (min-width: 1440px) {
+  .furniture-title {
+    font-size: var(--font-size-rare);
+  }
+  
   .furniture-list {
     row-gap: 40px;
   }
