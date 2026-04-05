@@ -26,6 +26,7 @@
   max-width: 335px;
   border-radius: 8px;
   padding: 64px 20px;
+  padding-bottom: 32px;
   background: var(--background-main);
   gap: 24px;
   overflow-y: auto;
@@ -202,6 +203,7 @@
 
   .product-images {
     max-width: 580px;
+    justify-content: center;
   }
   .product-img-wrapper {
     height: 308px;

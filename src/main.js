@@ -1,10 +1,3 @@
-import {
-  openModal,
-  closeModal,
-  onBackdropClick,
-  onKeydownEscape,
-} from './js/close-modal';
-
 import './js/modal-details';
 import accordionInit from './js/accordion.js';
 

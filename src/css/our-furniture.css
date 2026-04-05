@@ -1,7 +1,7 @@
 .furniture-title {
   font-family: "Raleway", sans-serif;
   font-weight: var(--font-weight-secondary);
-  font-size: var(--font-size-secondary);
+  font-size: var(--font-size-rare);
   line-height: var(--line-height-secondary);
   letter-spacing: var(--letter-spacing-main);
   color: var(--color-main);
@@ -27,7 +27,7 @@
 
 .category-name {
   position: relative;
-  z-index: 2;
+  z-index: 0;
   width: 128px;
   font-family: "Raleway", sans-serif;
   text-align: center;
@@ -64,7 +64,7 @@
   right: 0;
   bottom: 0;
   background: var(--background-gradient-cards);
-  z-index: 1;
+  z-index: 0;
 }
 
 .our-furniture-item::after {
@@ -77,7 +77,7 @@
   border: var(--border-cards-accent);
   border-radius: var(--border-radius-cards-img);
   opacity: 0;
-  z-index: 3;
+  z-index: 0;
   pointer-events: none;
   transition: opacity var(--time) ease;
 }
@@ -327,10 +327,6 @@ background-image: image-set(
 }
 
 @media screen and (min-width: 1440px) {
-  .furniture-title {
-    font-size: var(--font-size-rare);
-  }
-  
   .furniture-list {
     row-gap: 40px;
   }
