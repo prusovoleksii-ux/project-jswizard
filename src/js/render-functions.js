@@ -45,8 +45,12 @@ function createMarkup(item) {
 }
 
 // Завантажити меблі
-export async function loadFurnitures(items) {
+export async function loadFurnitures(items, isNewCategory) {
   if (!refs.furnitureList) return;
+
+  if (isNewCategory) {
+    refs.furnitureList.innerHTML = '';
+  }
 
   if (items.length === 0) {
     refs.furnitureList.innerHTML = '';
@@ -56,3 +60,25 @@ export async function loadFurnitures(items) {
   const markup = items.map(createMarkup).join('');
   refs.furnitureList.insertAdjacentHTML('beforeend', markup);
 }
+
+// Завантаження тексту для категорій
+
+export function fillCategoryNames(categories) {
+  if (!refs.categoryList) {
+    return;
+  }
+
+  const allItem = document.querySelector('[data-id="all"]');
+  if (allItem) {
+    allItem.innerHTML = `<span class="category-name">Всі товари</span>`;
+  }
+
+  categories.forEach(cat => {
+    const li = document.querySelector(`[data-id="${cat._id}"]`);
+
+    if (li) {
+      li.innerHTML = `<span class="category-name">${cat.name}</span>`;
+    }
+  })
+}
+
