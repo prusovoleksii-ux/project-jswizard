@@ -19,6 +19,7 @@
   "dependencies": {
     "accordion": "^3.0.2",
     "axios": "^1.14.0",
+    "imask": "^7.6.1",
     "izitoast": "^1.4.0",
     "modern-normalize": "^3.0.1",
     "vite-plugin-full-reload": "^1.2.0",
