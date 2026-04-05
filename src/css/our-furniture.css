@@ -1,3 +1,203 @@
+.furniture-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: var(--font-weight-secondary);
+  font-size: var(--font-size-secondary);
+  line-height: var(--line-height-secondary);
+  letter-spacing: var(--letter-spacing-main);
+  color: var(--color-main);
+  margin-bottom: 16px;
+}
+
+.furniture-elem {
+  font-family: "Raleway", sans-serif;
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-main);
+  color: var(--color-main);
+  margin-bottom: 40px;
+}
+
+.our-furniture-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.category-name {
+  position: relative;
+  z-index: 2;
+  width: 128px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  pointer-events: none;
+  font-weight: var(--font-weight-secondary);
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-additional);
+  letter-spacing: var(--letter-spacing-main);
+  color: var(--color-secondary);
+}
+
+.our-furniture-item {
+  position: relative;
+  width: 159px;
+  height: 122px;
+  border-radius: var(--border-radius-cards-img);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--time) ease;
+}
+
+.our-furniture-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background-gradient-cards);
+  z-index: 1;
+}
+
+.our-furniture-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: var(--border-cards-accent);
+  border-radius: var(--border-radius-cards-img);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity var(--time) ease;
+}
+
+.our-furniture-item.active::after {
+  opacity: 1;
+}
+
+[data-id="all"] {
+  background-image: image-set(
+    url('../img/our-furniture/img12.jpg') 1x,
+    url('../img/our-furniture/img12@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7b8"] {
+  background-image: image-set(
+    url('../img/our-furniture/img11.jpg') 1x,
+    url('../img/our-furniture/img11@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7b9"]{
+background-image: image-set(
+  url('../img/our-furniture/img10.jpg') 1x,
+  url('../img/our-furniture/img10@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7ba"]{
+background-image: image-set(
+  url('../img/our-furniture/img9.jpg') 1x,
+  url('../img/our-furniture/img9@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7bb"]{
+background-image: image-set(
+  url('../img/our-furniture/img8.jpg') 1x,
+  url('../img/our-furniture/img8@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7bc"]{
+background-image: image-set(
+  url('../img/our-furniture/img7.jpg') 1x,
+  url('../img/our-furniture/img7@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7bd"]{
+background-image: image-set(
+  url('../img/our-furniture/img6.jpg') 1x,
+  url('../img/our-furniture/img6@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7be"]{
+background-image: image-set(
+  url('../img/our-furniture/img5.jpg') 1x,
+  url('../img/our-furniture/img5@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7bf"]{
+background-image: image-set(
+  url('../img/our-furniture/img4.jpg') 1x,
+  url('../img/our-furniture/img4@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7c0"]{
+background-image: image-set(
+  url('../img/our-furniture/img3.jpg') 1x,
+  url('../img/our-furniture/img3@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7c1"]{
+background-image: image-set(
+  url('../img/our-furniture/img2.jpg') 1x,
+  url('../img/our-furniture/img2@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7c2"]{
+background-image: image-set(
+  url('../img/our-furniture/img1.jpg') 1x,
+  url('../img/our-furniture/img1@2x.jpg') 2x);
+}
+
+[data-id="66504a50a1b2c3d4e5f6a7c3"]{
+background-image: image-set(
+  url('../img/our-furniture/img.jpg') 1x,
+  url('../img/our-furniture/img@2x.jpg') 2x);
+}
+
+@media screen and (min-width: 768px){
+    .our-furniture-list {
+      gap: 24px;
+    }
+
+    .category-name {
+      width: 126px;
+    }
+
+    .our-furniture-item {
+      width: calc(100% - 72px) / 4;
+      width: 158px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+  .our-furniture-list {
+    gap: 24px;
+  }
+
+  .category-name {
+    width: 134px;
+  }
+
+  .our-furniture-item {
+    width: calc(100% - 144px) / 7;
+    width: 166px;
+  }
+}
+
+/* ТАРАСА ЧАСТИНА */
+
+
+
 .furniture-list {
   display: flex;
   flex-direction: column;
@@ -127,6 +327,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .furniture-title {
+    font-size: var(--font-size-rare);
+  }
+  
   .furniture-list {
     row-gap: 40px;
   }
