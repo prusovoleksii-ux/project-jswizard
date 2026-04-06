@@ -1,0 +1,47 @@
+<div class="modal-order ">
+  <div class="backdrop order-backdrop" data-modal>
+    <div class="modal" id="modal">
+      <button class="btn-close" type="button" data-modal-close>
+        <svg class="btn-close-icon" width="32" height="32">
+          <use href="./img/icons.svg#x"></use>
+        </svg>
+      </button>
+      <h2 class="modal-title title-section">Замовити</h2>
+      <form class="form" name="modal-form" autocomplete="on" method="post">
+        <div class="entry-field">
+          <label class="modal-label" for="name">Ім’я*</label>
+          <input
+            class="modal-input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Дмитро"
+          />
+        </div>
+        <div class="entry-field">
+          <label class="modal-label" for="phone">Телефон*</label>
+          <input
+            class="modal-input"
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="38 099 123 22 11"
+          />
+        </div>
+        <div class="entry-field">
+          <label class="modal-label comment" for="comment">Коментар</label>
+          <textarea
+            class="modal-comment"
+            name="comment"
+            id="comment"
+            placeholder="Введіть ваш коментар"
+          ></textarea>
+        </div>
+        <button class="send-button button" type="submit">
+          Надіслати заявку
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="module" src="./js/modal-order.js"></script>
