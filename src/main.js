@@ -14,6 +14,9 @@ import {
   onKeydownEscape,
 } from './js/close-modal';
 
+import { initFeedbackSection } from './js/reviews.js';
+document.addEventListener('DOMContentLoaded', initFeedbackSection);
+
 import { PAGE_SIZE } from './js/constants';
 import { refs } from './js/refs';
 import { fetchFurnitures, fetchCategories, fetchPopularFurnitures } from './js/products-api';
