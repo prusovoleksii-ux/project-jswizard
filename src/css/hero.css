@@ -2,7 +2,7 @@
   padding-top: 88px;
   padding-bottom: 88px;
   background-image:
-    linear-gradient (var()),
+    linear-gradient (var(--background-gradient-hiro)),
     url('../img/hero/hero-mob.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -43,23 +43,25 @@
 
 .hero-btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 209px;
   min-height: 46px;
   padding: 10px 24px;
   border-radius: 100px;
-  background-color: #6b0609;
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
+
+  background-color: var(--background-secondary);
+  color: var(--color-secondary);
   text-align: center;
- box-shadow: 
-0 1px 2px 0 rgba(8, 12, 9, 0.05),
-inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2),
-inset 0 0 0 1px rgba(8, 12, 9, 0.15),
-inset 0 2px 1px 0 rgba(255, 255, 255, 0.25),
-inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+
+  box-shadow: var(--box-shadow-dark);
+  transition: background-color var(--time) var(--cubic-bezier);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--background-slider-hover);
 }
 
 /* retina mobile */
