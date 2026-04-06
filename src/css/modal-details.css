@@ -11,7 +11,27 @@
   overflow-y: auto;
   padding-top: 32px;
   padding-bottom: 32px;
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    visibility 0s linear 220ms;
 }
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transition:
+    opacity 220ms ease,
+    visibility 0s linear 0s;
+}
+/* .backdrop.is-hidden {
+  display: none;
+} */
 
 .modal-details {
   display: flex;
@@ -30,7 +50,31 @@
   background: var(--background-main);
   gap: 24px;
   overflow-y: auto;
+
+  transform: translateY(180px) scale(0.72);
+  opacity: 0;
+
+  transition:
+    transform 520ms cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    opacity 320ms ease;
 }
+.backdrop.is-open .product-container {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.backdrop.is-open .product-container > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-container > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
 .modal-close-btn {
   position: absolute;
   top: 16px;
@@ -217,11 +261,7 @@
   }
 }
 /* #region close */
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
+
 .no-scroll {
   overflow: hidden;
 }

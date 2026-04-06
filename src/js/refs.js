@@ -3,5 +3,6 @@ export const refs = {
   loadMoreBtn: document.querySelector('.furniture-show-more'),
   backdrop: document.querySelector('.backdrop'),
   modalCloseBtn: document.querySelector('.js-close-modal'),
-  categoryList: document.querySelector('.our-furniture-list')
+  categoryList: document.querySelector('.our-furniture-list'),
+  popularList: document.querySelector('.popular-list'),
 };
