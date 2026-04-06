@@ -1,0 +1,189 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: var(--background-backdrop);
+  transition:
+    opacity var(--time) var(--cubic-bezier),
+    visibility var(--time) var(--cubic-bezier);
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 100%;
+  min-width: 335px;
+  height: auto;
+  padding: 64px 20px;
+  background-color: var(--background-main);
+  border-radius: var(--border-radius-cards-img);
+  opacity: 0;
+  transition:
+    opacity var(--time) var(--cubic-bezier),
+    transform var(--time) var(--cubic-bezier);
+  transition-delay: var(--time);
+}
+.backdrop.is-open .modal {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.modal-open {
+  overflow: hidden;
+}
+.btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-main);
+  background-color: var(--background-main);
+}
+.btn-close-icon {
+  fill: currentColor;
+}
+.modal-title {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.entry-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-main);
+  color: var(--color-main);
+}
+.modal-label {
+  display: block;
+}
+.modal-input,
+.modal-comment {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: var(--border-input);
+  border-radius: var(--border-radius-input);
+  outline: transparent;
+  transition: border-color var(--time) var(--cubic-bezier);
+  background-color: var(--background-input);
+}
+.modal-input {
+  padding: 8px 12px;
+}
+.modal-comment {
+  padding: 12px;
+  height: 180px;
+  resize: none;
+}
+.modal-input::placeholder,
+.modal-comment::placeholder {
+  color: var(--color-input-placeholder);
+}
+.modal-input:focus,
+.modal-comment:focus {
+  border-color: var(--border-input-accent);
+}
+/* Стилі для валідації - помилки */
+.modal-input.is-invalid,
+.modal-comment.is-invalid {
+  border: 2px solid var(--color-input-error);
+  outline: none;
+}
+/* Стилі для валідації - успіх */
+.modal-input.is-valid,
+.modal-comment.is-valid {
+  border: 2px solid var(--color-input-success);
+  outline: none;
+}
+/* Повідомлення про помилки */
+.just-validate-error-label {
+  color: var(--color-input-error);
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+/* Повідомлення про успіх */
+.just-validate-success-label {
+  color: var(--color-input-success);
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+.send-button {
+  display: block;
+  width: 295px;
+  margin: 0 auto;
+  color: var(--color-secondary);
+  padding: 10px 24px;
+  background-color: var(--background-secondary);
+  transition: opacity var(--time) var(--cubic-bezier);
+}
+/* Блокування кнопки коли поля не заповнені */
+.send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+  pointer-events: none;
+}
+.send-button:not(:disabled):hover,
+.send-button:not(:disabled):focus {
+  opacity: 0.8;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--background-input) inset !important;
+  -webkit-text-fill-color: var(--color-main) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+/* Styles for Tablet devices */
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 100%;
+    max-width: 704px;
+    padding: 64px 32px 32px;
+  }
+  .send-button {
+    width: 196px;
+  }
+}
+/* Styles for Desktop devices */
+@media screen and (min-width: 1440px) {
+  .modal {
+    max-width: 866px;
+    padding: 64px;
+  }
+  .send-button:hover,
+  .send-button:focus {
+    opacity: 0.5;
+  }
+}

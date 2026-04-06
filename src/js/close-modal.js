@@ -45,6 +45,8 @@ export function openOrderModal() {
   document.body.style.paddingRight = `${scrollBarWidth}px`;
 
   requestAnimationFrame(() => {
+    closeModal();
     orderBackdrop.classList.add('is-open');
+
   });
 }
