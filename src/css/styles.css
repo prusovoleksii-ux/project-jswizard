@@ -17,3 +17,7 @@
 @import url('./our-furniture.css');
 @import url('./popular-products.css');
 @import url('./reviews.css');
+
+/* loader */
+@import url('./loader.css')
+

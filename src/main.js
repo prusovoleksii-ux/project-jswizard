@@ -14,6 +14,7 @@ import {
   scrollPage,
   hideLoadMoreBtn,
 } from './js/base-functions';
+import { showLoader, hideLoader } from './js/loader.js';
 
 //modal close & open
 refs.modalCloseBtn.addEventListener('click', closeModal);
@@ -26,7 +27,7 @@ export let page = 1;
 
 document.addEventListener('DOMContentLoaded', async () => {
   accordionInit();
-
+showLoader()
   hideLoadMoreBtn();
 
   try {
@@ -36,13 +37,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     checkBtnStatus();
   } catch (error) {
     console.error('Помилка при завантаженні меблів:', error);
+  } finally {
+    hideLoader();
   }
 });
 
 refs.loadMoreBtn.addEventListener('click', async () => {
   page += 1;
   hideLoadMoreBtn();
-
+showLoader()
   try {
     const data = await fetchFurnitures();
     loadFurnitures(data.furnitures);
@@ -50,5 +53,7 @@ refs.loadMoreBtn.addEventListener('click', async () => {
     checkBtnStatus();
   } catch (error) {
     console.error('Помилка при завантаженні меблів:', error);
+  }finally {
+    hideLoader();
   }
 });
