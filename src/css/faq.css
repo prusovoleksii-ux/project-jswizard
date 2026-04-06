@@ -1,0 +1,135 @@
+/* SECTION */
+.faq-section {
+  background-color: var(--background-main);
+  padding: 48px 0;
+}
+
+.faq-section .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* TITLE */
+.faq-title {
+  text-align: center;
+  color: var(--color-main);
+  margin-bottom: 32px;
+
+  font-weight: var(--font-weight-secondary);
+  font-size: var(--font-size-secondary);
+  line-height: var(--line-height-secondary);
+  letter-spacing: var(--letter-spacing-main);
+}
+
+/* WRAPPER */
+.accordion-container {
+  max-width: 335px;
+  margin: 0 auto;
+}
+
+/* ITEM */
+.ac {
+  border: none;
+  border-top: 1px solid rgba(8, 12, 9, 0.15);
+  margin-bottom: 0;
+}
+
+.ac:last-child {
+  border-bottom: 1px solid rgba(8, 12, 9, 0.15);
+}
+
+/* HEADER RESET */
+.ac-header {
+  margin: 0;
+}
+
+/* BUTTON */
+.ac .ac-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  padding: 20px 0;
+
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: var(--font-weight-secondary);
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-main);
+  color: var(--color-main);
+
+  appearance: none;
+}
+
+/* REMOVE LIB ICON */
+.ac-trigger::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ICON */
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform var(--time) var(--cubic-bezier);
+}
+
+.ac.is-active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* TEXT */
+.ac .ac-panel .ac-text {
+  all: unset;
+  display: block;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: var(--font-weight-main);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-main);
+  color: var(--color-main);
+
+  padding-bottom: 24px;
+}
+
+/* ================= TABLET ================= */
+@media screen and (min-width: 768px) {
+  .accordion-container {
+    max-width: 704px;
+  }
+
+  .ac .ac-trigger {
+    padding: 21.5px 0;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media screen and (min-width: 1440px) {
+  .faq-section {
+    padding: 80px 0;
+  }
+
+  .accordion-container {
+    max-width: 865px;
+  }
+
+  .faq-title {
+    font-size: var(--font-size-rare);
+  }
+}
+
+/* FORCE TEXT COLOR ALWAYS BLACK */
+.ac .ac-trigger,
+.ac .ac-trigger:visited,
+.ac .ac-trigger:active,
+.ac .ac-trigger:focus,
+.ac .ac-trigger:focus-visible,
+.ac.is-active .ac-trigger {
+  color: var(--color-main) !important;
+}
