@@ -36,3 +36,10 @@ export async function fetchCategories() {
   const response = await axios.get(url);
   return response.data;
 }
+
+export async function fetchPopularFurnitures() {
+  const response = await axios.get(BASE_URL + ENDPOINT.FURNITURES, {
+    params: { type: 'popular' },
+  });
+  return response.data;
+}

@@ -10,7 +10,7 @@ export function swatchClass(color) {
 }
 
 // Розмітка однієї картки
-function createMarkup(item) {
+function createMarkup(item, extraClass = '') {
   const image = item.images?.[0] ?? '';
   const name = item.name || 'Без назви';
   const price = Number(item.price || 0).toLocaleString('uk-UA');
@@ -26,7 +26,7 @@ function createMarkup(item) {
     .join('');
 
   return `
-		<li class="furniture-item" data-id="${item._id}">
+		<li class="furniture-item${extraClass ? ' ' + extraClass : ''}" data-id="${item._id}">
 			<img
 				class="furniture-item-img"
 				src="${image}"
@@ -82,3 +82,8 @@ export function fillCategoryNames(categories) {
   })
 }
 
+export function loadPopularFurnitures(items) {
+  const list = document.querySelector('.popular-list');
+  if (!list) return;
+  list.innerHTML = items.map(item => createMarkup(item, 'swiper-slide')).join('');
+}

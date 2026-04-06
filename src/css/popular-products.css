@@ -1,0 +1,57 @@
+.popular-products-title {
+  text-align: center;
+  color: var(--color-main);
+  margin-bottom: 32px;
+
+  font-weight: var(--font-weight-secondary);
+  font-size: var(--font-size-secondary);
+  line-height: var(--line-height-secondary);
+  letter-spacing: var(--letter-spacing-main);
+}
+
+.popular-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.popular-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.popular-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(8, 12, 9, 0.15);
+  border-radius: 100px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.popular-btn:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.popular-pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popular-pagination .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+/* ================= DESKTOP ================= */
+@media screen and (min-width: 1440px) {
+  .popular-products-title {
+    font-size: var(--font-size-rare);
+  }
+}

@@ -52,6 +52,7 @@ function renderModal(data) {
 }
 
 refs.furnitureList.addEventListener('click', onCardClick);
+if (refs.popularList) refs.popularList.addEventListener('click', onCardClick);
 async function onCardClick(e) {
   const btn = e.target.closest('.furniture-item-btn');
   if (!btn) return;

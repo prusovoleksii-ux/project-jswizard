@@ -1,3 +1,9 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import './js/modal-details';
 import accordionInit from './js/accordion.js';
 
@@ -8,8 +14,8 @@ import { openModal,
 
 import { PAGE_SIZE } from './js/constants';
 import { refs } from './js/refs';
-import { fetchFurnitures, fetchCategories } from './js/products-api';
-import { loadFurnitures, fillCategoryNames } from './js/render-functions';
+import { fetchFurnitures, fetchCategories, fetchPopularFurnitures } from './js/products-api';
+import { loadFurnitures, fillCategoryNames, loadPopularFurnitures } from './js/render-functions';
 import {
   checkBtnStatus,
   scrollPage,
@@ -48,6 +54,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     checkBtnStatus();
   } catch (error) {
     console.error('Помилка при завантаженні меблів:', error);
+  }
+
+// популярні меблі
+   try {
+     const popularData = await fetchPopularFurnitures();
+     loadPopularFurnitures(popularData.furnitures);
+     new Swiper('.popular-viewport', {
+  modules: [Navigation, Pagination],
+  slidesPerView: 1.5,
+  spaceBetween: 16,
+  breakpoints: {
+    480: { slidesPerView: 1.5, spaceBetween: 24 },
+    768: { slidesPerView: 2, spaceBetween: 24 },
+    1200: { slidesPerView: 4, spaceBetween: 24 },
+  },
+  navigation: {
+    prevEl: '.popular-btn--prev',
+    nextEl: '.popular-btn--next',
+  },
+  pagination: {
+    el: '.popular-pagination',
+    clickable: true,
+  },
+});
+  } catch (error) {
+    console.error('Помилка при завантаженні популярних меблів:', error);
   }
 });
 
@@ -88,3 +120,4 @@ refs.categoryList.addEventListener('click', async (event) => {
     console.error('Помилка при завантаженні меблів:', error);
   }
 });
+
