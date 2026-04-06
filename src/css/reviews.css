@@ -167,6 +167,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 4px;
 }
 .swiper {
   margin-left: auto;

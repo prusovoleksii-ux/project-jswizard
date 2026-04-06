@@ -1,6 +1,4 @@
-// Add to main file  JS
-// import { initFeedbackSection } from './js/reviews.js';
-// document.addEventListener('DOMContentLoaded', initFeedbackSection);
+
 
 // Axios
 import axios from 'axios';
