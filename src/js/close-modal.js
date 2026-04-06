@@ -24,3 +24,10 @@ export function openModal() {
   refs.backdrop.classList.remove('is-hidden');
   document.body.classList.add('no-scroll');
 }
+
+export function openOrderModal() {
+  const orderBackdrop = document.querySelector('.order-backdrop');
+  if (!orderBackdrop) return;
+  orderBackdrop.classList.remove('is-hidden');
+  document.body.classList.add('no-scroll');
+}

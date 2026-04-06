@@ -11,7 +11,7 @@ const modalRefs = {
   colorContainer: document.querySelector('.product-input'),
 };
 import { refs } from './refs';
-import { closeModal, openModal } from './close-modal';
+import { closeModal, openModal, openOrderModal } from './close-modal';
 import { swatchClass } from './render-functions';
 import { fetchFurnitureById } from './products-api';
 
@@ -66,3 +66,16 @@ async function onCardClick(e) {
     openModal();
   } catch (error) {}
 }
+
+//перехід з product modal => order modal
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.querySelector('.modal-details');
+  modal?.addEventListener('click', e => {
+    const orderBtn = e.target.closest('.button-order');
+    if (!orderBtn) return;
+    e.preventDefault();
+
+    closeModal();
+    openOrderModal();
+  });
+});
