@@ -109,7 +109,7 @@ body.no-scroll {
   color: var(--color-secondary);
   border-radius: var(--border-radius-btn);
   box-shadow: var(--box-shadow-light);
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-btn:hover,
 .nav-btn:focus {
@@ -183,7 +183,7 @@ body.no-scroll {
     line-height: var(--line-height-main);
     color: var(--color-main);
     margin-right: 32px;
-    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-list a:hover,
@@ -191,24 +191,6 @@ body.no-scroll {
     opacity: 0.5;
   }
   .nav-btn {
-    display: block;
-    background-color: var(--background-secondary);
-    padding: 8px 20px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: var(--font-weight-rare);
-    font-size: var(--font-size-body);
-    line-height: var(--line-height-main);
-    color: var(--color-secondary);
-    border-radius: var(--border-radius-btn);
-    box-shadow: var(--box-shadow-light);
     width: 129px;
-  }
-  .nav-btn:hover,
-  .nav-btn:focus {
-    opacity: 0.5;
-  }
-  .nav-btn:active {
-    opacity: 1;
-    box-shadow: none;
   }
 }
