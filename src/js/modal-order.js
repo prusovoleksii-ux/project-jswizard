@@ -260,8 +260,8 @@ form.addEventListener('submit', async e => {
     name: nameInput.value.trim(),
     phone: phoneMask.unmaskedValue,
     comment: commentInput.value.trim() || 'Без коментаря',
-    modelId: '682f9bbf8acbdf505592ac36', //!!!необхідно виправити
-    color: '#1212ca', //!!!необхідно виправити
+    modelId: currentProduct, //!!!необхідно виправити
+    color: selectedColor, //!!!необхідно виправити
   };
   try {
     await axios.post(API_URL, formData);
