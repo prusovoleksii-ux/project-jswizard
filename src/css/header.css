@@ -78,6 +78,7 @@ body.no-scroll {
   background-color: var(--background-main);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .mobile-nav-list {
@@ -110,6 +111,8 @@ body.no-scroll {
   border-radius: var(--border-radius-btn);
   box-shadow: var(--box-shadow-light);
   transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  max-width: 335px;
 }
 .nav-btn:hover,
 .nav-btn:focus {
@@ -141,7 +144,7 @@ body.no-scroll {
     margin-top: 0;
   }
   .nav-btn {
-    width: 100%;
+    max-width: 185px;
   }
   .overlay {
     position: fixed;
