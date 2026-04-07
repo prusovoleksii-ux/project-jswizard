@@ -9,12 +9,14 @@ const modalRefs = {
   rowImgSecond: document.querySelector('.row-img-second'),
   color: document.querySelector('.product-color__circle'),
   colorContainer: document.querySelector('.product-input'),
+  reviewProduct: document.querySelector('.product-review'),
 };
 import { refs } from './refs';
 import { closeModal, openModal, openOrderModal } from './close-modal';
 import { swatchClass } from './render-functions';
 import { fetchFurnitureById } from './products-api';
 import { hideLoader, showLoader } from './loader';
+import { renderStars } from './reviews';
 
 let currentProduct = null;
 let selectedColor = null;
@@ -52,6 +54,7 @@ function renderModal(data) {
   modalRefs.rowImgFirst.alt = data.name;
   modalRefs.rowImgSecond.src = data.images?.[2] || data.images?.[0];
   modalRefs.rowImgSecond.alt = data.name;
+  modalRefs.reviewProduct.innerHTML = renderStars(data.rate);
   renderColor(data.color);
 }
 

@@ -134,6 +134,9 @@
   letter-spacing: var(--letter-spacing-main);
   color: var(--color-main);
 }
+/* .product-review {
+  display: flex;
+} */
 .product-input {
   display: flex;
   flex-direction: row;

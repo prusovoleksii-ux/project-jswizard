@@ -1,5 +1,3 @@
-
-
 // Axios
 import axios from 'axios';
 
@@ -122,7 +120,7 @@ function renderFeedbackSlide(item) {
   `;
 }
 
-function renderStars(rating) {
+export function renderStars(rating) {
   return Array.from({ length: 5 }, (_, i) => {
     const index = i + 1;
 
