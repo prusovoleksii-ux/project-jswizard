@@ -82,6 +82,9 @@
   padding: 0;
   background: var(--background-main);
 }
+.modal-close-btn:hover {
+  fill: #838584;
+}
 
 .product-images {
   display: flex;
@@ -134,9 +137,7 @@
   letter-spacing: var(--letter-spacing-main);
   color: var(--color-main);
 }
-/* .product-review {
-  display: flex;
-} */
+
 .product-input {
   display: flex;
   flex-direction: row;
