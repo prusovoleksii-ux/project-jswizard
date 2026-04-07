@@ -1,3 +1,4 @@
+import { showLoader } from './loader';
 import { refs } from './refs';
 export const isModalOpen = () => {
   return refs.backdrop.classList.contains('is-open');
@@ -47,6 +48,5 @@ export function openOrderModal() {
   requestAnimationFrame(() => {
     closeModal();
     orderBackdrop.classList.add('is-open');
-
   });
 }
