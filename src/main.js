@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -82,9 +82,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const popularData = await fetchPopularFurnitures();
     loadPopularFurnitures(popularData.furnitures);
     new Swiper('.popular-viewport', {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Keyboard],
       slidesPerView: 1.5,
       spaceBetween: 16,
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+      },
+
       breakpoints: {
         768: { slidesPerView: 2, spaceBetween: 24 },
         1440: { slidesPerView: 4, spaceBetween: 24 },

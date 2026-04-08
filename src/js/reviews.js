@@ -7,7 +7,7 @@ const feedbacksURL = `${URL}/api/feedbacks`;
 
 // Swiper
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 
 // Star-rating.css import 'css-star-rating/css/star-rating.css';
@@ -58,13 +58,19 @@ export async function initFeedbackSection() {
 
     // Swiper init
     new Swiper(swiperEl, {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Keyboard],
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 20,
       loop: false,
       resistanceRatio: 0.85,
       touchRatio: 1.2,
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+      },
 
       breakpoints: {
         768: {
