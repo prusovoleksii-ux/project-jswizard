@@ -104,10 +104,8 @@ main {
   font-weight: var(--font-weight-rare);
   font-size: var(--font-size-body);
   line-height: var(--line-height-main);
-  box-shadow: var(--box-shadow-dark);
   border-radius: var(--border-radius-btn);
   transition: opacity var(--time) var(--cubic-bezier);
   padding: 10px 24px;
   min-height: 46px;
-  background: var(--background-btn-main);
 }

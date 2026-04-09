@@ -1,6 +1,6 @@
-
 .footer {
-  background-color: var(--background-secondary); }
+  background-color: var(--background-secondary);
+}
 
 .footer-container {
   padding: 0px 20px 32px 20px;
@@ -8,7 +8,7 @@
 
 .footer-logo {
   display: block;
-  margin-bottom: 24px; 
+  margin-bottom: 24px;
   padding: 24px 4px 24px 4px;
 }
 
@@ -30,20 +30,22 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
-  color:  var(--background-main); 
-  transition: transform var(--time) var(--cubic-bezier),
+  color: var(--background-main);
+  transition:
+    transform var(--time) var(--cubic-bezier),
     opacity var(--time) var(--cubic-bezier);
-  }
+}
 
-  .footer-menu-link:hover,
-  .footer-menu-link:focus{
-    opacity: 0.5;
-    transform: translateY(-2px);
-  }
+.footer-menu-link:hover,
+.footer-menu-link:focus {
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
 
 .footer-socials {
   display: flex;
   justify-content: center;
+  align-items: baseline;
   gap: 24px;
   margin-bottom: 24px;
   height: 24px;
@@ -51,26 +53,24 @@
 
 .footer-socials-links {
   display: block;
-  transition: transform var(--time) var(--cubic-bezier);
+  transition:
+    transform var(--time) var(--cubic-bezier),
+    opacity var(--time) var(--cubic-bezier);
 }
 
-.footer-socials-links:active {
-  transform: scale(0.9);
+.footer-socials-links:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
 }
 
 .footer-socials-icon {
-   width: 24px;
-   height: 24px;
-  fill: var(--background-main); 
-  transition: transform var(--time) var(--cubic-bezier),
+  width: 24px;
+  height: 24px;
+  fill: var(--background-main);
+  transition:
+    transform var(--time) var(--cubic-bezier),
     opacity var(--time) var(--cubic-bezier);
-  }
-
-  .footer-socials-items:hover,
-  .footer-socials-items:focus {
-    opacity: 0.5;
-    transform: translateY(-2px);
-  }
+}
 
 .copyright {
   text-align: center;
@@ -107,17 +107,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-     column-gap: 80px;
+    column-gap: 80px;
   }
 
   .footer-socials-items {
     display: flex;
     justify-content: center;
-    align-items: center;}
-   
+    align-items: center;
+  }
+
   .footer-logo {
     order: 1;
-     margin-bottom: 0;
+    margin-bottom: 0;
   }
   .copyright {
     order: 2;
@@ -130,7 +131,7 @@
     order: 4;
     margin-bottom: 0;
   }
- .footer-menu-item {
+  .footer-menu-item {
     position: relative;
   }
 }

@@ -48,20 +48,16 @@
   width: 209px;
   min-height: 46px;
   padding: 10px 24px;
-  border-radius: 100px;
 
   background-color: var(--background-secondary);
   color: var(--color-secondary);
-  text-align: center;
-  text-decoration: none;
-
+  transition: opacity var(--time) var(--cubic-bezier);
   box-shadow: var(--box-shadow-dark);
-  transition: background-color var(--time) var(--cubic-bezier);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: var(--background-slider-hover);
+  opacity: 0.5;
 }
 
 /* retina mobile */
