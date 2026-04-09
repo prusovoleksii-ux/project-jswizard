@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       'Не вдалося завантажити популярні меблі. Спробуйте пізніше.',
       'topRight'
     );
+    document.querySelector('.popular-buttons').classList.add('hidden');
   }
 });
 
